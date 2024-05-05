@@ -6,10 +6,6 @@ terraform {
 
 resource "local_file" "hello" {
   filename = "hello.py"
-  content = <<-EOT
-  def przywitanie(co_wyswietli):
-    print(co_wyswietli)
+  content = "${var.zmienna_1}"
 
-  przywitanie("ciekawy tekst")
-  EOT
 }
